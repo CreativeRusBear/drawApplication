@@ -1,3 +1,12 @@
+$darkGrey: #a6a6a6;
+$borderColor: #abb8c9;
+$borderHoverColor: #abd4fe;
+$borderHoverBackgroundColor: #f1f7fe;
+
+@mixin hoverElement{
+  background: $borderHoverBackgroundColor;
+  border: 1px solid $borderHoverColor;
+}
 *{
   margin: 0;
   padding: 0;
@@ -7,10 +16,49 @@
 
 .container{
   background: #f6f7f8;
-  border-bottom: 1px solid #abb8c9;
-}
+  display: flex;
+  justify-content: space-between;
 
+}
+.leftElements{
+  display: flex;
+  justify-content: flex-start;
+}
+.rightElements{
+  display: flex;
+  justify-content: flex-end;
+  font-size: 14px;
+  #hideElements{
+    color: $darkGrey;
+    font-weight: bold;
+    padding: 10px 7px;
+    &:hover{
+      @include hoverElement;
+    }
+  }
+  #info{
+    padding: 10px 5px;
+    &:hover{
+      @include hoverElement;
+    }
+  }
+  #aboutProduct{
+    background: #0074d1;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    text-align: center;
+    padding: 3px;
+    color: #fff;
+    font-size: 10px;
+    border: 0.5px solid #0b5894;
+  }
+}
 #file{
+    border:{
+      right: 1px solid $borderColor ;
+      bottom: 1px solid $borderColor;
+    };
     display: inline-block;
     color: #fff;
     background: #1979ca;
@@ -19,12 +67,15 @@
       background: #298ce1;
     }
 }
-
+#main{
+  padding: 10px 15px;
+}
 #inFile{
+  position: absolute;
   display: none;
   li{
     &:hover{
-      border: 1px solid #a8d2fd;
+      @include hoverElement;
     }
     img{
       width: 40px;
@@ -41,3 +92,12 @@
     }
   }
 }
+
+#tools{
+  padding-top: 10px;
+  background-color:#f6f7f8;
+  display: flex;
+  justify-content: space-between;
+}
+
+

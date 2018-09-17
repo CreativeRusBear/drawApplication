@@ -7,10 +7,51 @@
 
 .container {
   background: #f6f7f8;
-  border-bottom: 1px solid #abb8c9;
+  display: flex;
+  justify-content: space-between;
+}
+
+.leftElements {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.rightElements {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 14px;
+}
+.rightElements #hideElements {
+  color: #a6a6a6;
+  font-weight: bold;
+  padding: 10px 7px;
+}
+.rightElements #hideElements:hover {
+  background: #f1f7fe;
+  border: 1px solid #abd4fe;
+}
+.rightElements #info {
+  padding: 10px 5px;
+}
+.rightElements #info:hover {
+  background: #f1f7fe;
+  border: 1px solid #abd4fe;
+}
+.rightElements #aboutProduct {
+  background: #0074d1;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  text-align: center;
+  padding: 3px;
+  color: #fff;
+  font-size: 10px;
+  border: 0.5px solid #0b5894;
 }
 
 #file {
+  border-right: 1px solid #abb8c9;
+  border-bottom: 1px solid #abb8c9;
   display: inline-block;
   color: #fff;
   background: #1979ca;
@@ -20,11 +61,17 @@
   background: #298ce1;
 }
 
+#main {
+  padding: 10px 15px;
+}
+
 #inFile {
+  position: absolute;
   display: none;
 }
 #inFile li:hover {
-  border: 1px solid #a8d2fd;
+  background: #f1f7fe;
+  border: 1px solid #abd4fe;
 }
 #inFile li img {
   width: 40px;
@@ -38,6 +85,13 @@
 #inFile li p {
   position: relative;
   top: 15px;
+}
+
+#tools {
+  padding-top: 10px;
+  background-color: #f6f7f8;
+  display: flex;
+  justify-content: space-between;
 }
 
 /*# sourceMappingURL=style.css.map */
