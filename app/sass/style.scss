@@ -2,6 +2,7 @@ $darkGrey: #a6a6a6;
 $borderColor: #abb8c9;
 $borderHoverColor: #abd4fe;
 $borderHoverBackgroundColor: #f1f7fe;
+$darkGreyForTools: #5a5a5a;
 
 @mixin hoverElement{
   background: $borderHoverBackgroundColor;
@@ -11,14 +12,14 @@ $borderHoverBackgroundColor: #f1f7fe;
   margin: 0;
   padding: 0;
   font-family: Arial, Tahoma, sans-serif;
+}
+header{
   font-size: 16px;
 }
-
 .container{
   background: #f6f7f8;
   display: flex;
   justify-content: space-between;
-
 }
 .leftElements{
   display: flex;
@@ -93,11 +94,44 @@ $borderHoverBackgroundColor: #f1f7fe;
   }
 }
 
+section{
+  font-size: 12px;
+
+}
 #tools{
   padding-top: 10px;
   background-color:#f6f7f8;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #e2e3e4;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+}
+
+.buffer{
+  padding: 0 7px;
+  border-right: 1px solid #e2e3e4;
+
+  .items{
+    display: flex;
+    justify-content: flex-start;
+
+    #cut,#copy{
+      display: block;
+      width: 15px;
+      height: 15px;
+      margin-top: 5px;
+    }
+  }
+  .text{
+    text-align: center;
+  }
+}
+.drawTools{
+  padding: 0 7px;
+  border-right: 1px solid #e2e3e4;
+}
+.bottomTextInTools{
+  color: $darkGreyForTools;
 }
 
 
