@@ -13,6 +13,7 @@ function init() {
 function elementsInFile(eventObj) {
     var block = document.getElementById("inFile");
     block.style.border="1px solid #dcddde";
+    block.style.boxShadow = "7px 7px 22px 0px rgba(143,143,143,1)";
     if (fileOpen){
         fileOpen=false;
         eventObj.target.style.background="#1979ca";
@@ -29,14 +30,17 @@ function elementsInFile(eventObj) {
 
 function hideAndShowTools(eventObj) {
     var tools=document.getElementById("tools");
+    var header=document.getElementsByTagName("header");
     if (hideSection){
         hideSection=false;
-        tools.style.display="block";
+        tools.style.display="flex";
         eventObj.target.innerHTML="&#8743;";
+        header[0].style.borderBottom="";
     } else{
         hideSection=true;
         tools.style.display="none";
         eventObj.target.innerHTML="&#8744;";
+        header[0].style.borderBottom="1px solid #e2e3e4";
     }
 };
 

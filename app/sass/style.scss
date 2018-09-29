@@ -12,6 +12,7 @@ $darkGreyForTools: #5a5a5a;
   margin: 0;
   padding: 0;
   font-family: Arial, Tahoma, sans-serif;
+  box-sizing: border-box;
 }
 header{
   font-size: 16px;
@@ -46,8 +47,8 @@ header{
   #aboutProduct{
     background: #0074d1;
     border-radius: 50%;
-    width: 12px;
-    height: 12px;
+    width: 18px;
+    height: 18px;
     text-align: center;
     padding: 3px;
     color: #fff;
@@ -129,9 +130,37 @@ section{
 .drawTools{
   padding: 0 7px;
   border-right: 1px solid #e2e3e4;
+  text-align: center;
+  width: 105px;
+  .blockWithTools{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    img{
+      width: 30px;
+      height: 30px;
+      margin-bottom: 10px;
+    }
+  }
+}
+.TypesOfBrush{
+  padding: 0 7px;
+  text-align: center;
+  border-right: 1px solid #e2e3e4;
+  img{
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    padding: 5px;
+  }
+}
+.types{
+  display: none;
+
 }
 .bottomTextInTools{
   color: $darkGreyForTools;
 }
+
 
 
