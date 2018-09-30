@@ -8,6 +8,21 @@ $darkGreyForTools: #5a5a5a;
   background: $borderHoverBackgroundColor;
   border: 1px solid $borderHoverColor;
 }
+
+@mixin hoverElementsWithText{
+  border: 1px solid $borderHoverColor;
+  .text{
+    border:{
+      top: 1px solid $borderHoverColor;
+      bottom: none;
+      right: none;
+      left: none;
+    } ;
+    &:hover{
+      background: $borderHoverBackgroundColor;
+    }
+  }
+}
 *{
   margin: 0;
   padding: 0;
@@ -18,7 +33,6 @@ header{
   font-size: 16px;
 }
 .container{
-  background: #f6f7f8;
   display: flex;
   justify-content: space-between;
 }
@@ -30,6 +44,11 @@ header{
   display: flex;
   justify-content: flex-end;
   font-size: 14px;
+  width: 90%;
+  border: {
+    bottom: 1px solid #e2e3e4;
+    left: 1px solid #e2e3e4;
+  };
   #hideElements{
     color: $darkGrey;
     font-weight: bold;
@@ -70,6 +89,7 @@ header{
     }
 }
 #main{
+  background: #f6f7f8;
   padding: 10px 15px;
 }
 #inFile{
@@ -111,7 +131,9 @@ section{
 .buffer{
   padding: 0 7px;
   border-right: 1px solid #e2e3e4;
-
+  #note{
+    width: 50px;
+  }
   .items{
     display: flex;
     justify-content: flex-start;
@@ -127,6 +149,11 @@ section{
     text-align: center;
   }
 }
+.insert{
+  &:hover{
+      @include hoverElementsWithText;
+    }
+}
 .drawTools{
   padding: 0 7px;
   border-right: 1px solid #e2e3e4;
@@ -140,6 +167,9 @@ section{
       width: 30px;
       height: 30px;
       margin-bottom: 10px;
+      &:hover{
+        @include hoverElement;
+      }
     }
   }
 }

@@ -10,7 +10,6 @@ header {
 }
 
 .container {
-  background: #f6f7f8;
   display: flex;
   justify-content: space-between;
 }
@@ -24,6 +23,9 @@ header {
   display: flex;
   justify-content: flex-end;
   font-size: 14px;
+  width: 90%;
+  border-bottom: 1px solid #e2e3e4;
+  border-left: 1px solid #e2e3e4;
 }
 .rightElements #hideElements {
   color: #a6a6a6;
@@ -66,6 +68,7 @@ header {
 }
 
 #main {
+  background: #f6f7f8;
   padding: 10px 15px;
 }
 
@@ -108,6 +111,9 @@ section {
   padding: 0 7px;
   border-right: 1px solid #e2e3e4;
 }
+.buffer #note {
+  width: 50px;
+}
 .buffer .items {
   display: flex;
   justify-content: flex-start;
@@ -120,6 +126,19 @@ section {
 }
 .buffer .text {
   text-align: center;
+}
+
+.insert:hover {
+  border: 1px solid #abd4fe;
+}
+.insert:hover .text {
+  border-top: 1px solid #abd4fe;
+  border-bottom: none;
+  border-right: none;
+  border-left: none;
+}
+.insert:hover .text:hover {
+  background: #f1f7fe;
 }
 
 .drawTools {
@@ -137,6 +156,10 @@ section {
   width: 30px;
   height: 30px;
   margin-bottom: 10px;
+}
+.drawTools .blockWithTools img:hover {
+  background: #f1f7fe;
+  border: 1px solid #abd4fe;
 }
 
 .TypesOfBrush {

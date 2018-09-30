@@ -8,7 +8,7 @@ function init() {
     hideAndShowElements.onclick=hideAndShowTools;
     var linkOnMyGitRepository=document.getElementById("aboutProduct");
     linkOnMyGitRepository.onclick=repository;
-}
+};
 
 function elementsInFile(eventObj) {
     var block = document.getElementById("inFile");
@@ -30,17 +30,22 @@ function elementsInFile(eventObj) {
 
 function hideAndShowTools(eventObj) {
     var tools=document.getElementById("tools");
-    var header=document.getElementsByTagName("header");
+    var rightElementsOnHeader=document.getElementsByClassName("rightElements");
+    var mainElement=document.getElementById("main");
     if (hideSection){
         hideSection=false;
         tools.style.display="flex";
         eventObj.target.innerHTML="&#8743;";
-        header[0].style.borderBottom="";
+        rightElementsOnHeader[0].style.borderLeft="1px solid #e2e3e4";
+        mainElement.style.backgroundColor="#f6f7f8";
+        mainElement.style.borderBottom="none";
     } else{
         hideSection=true;
         tools.style.display="none";
         eventObj.target.innerHTML="&#8744;";
-        header[0].style.borderBottom="1px solid #e2e3e4";
+        mainElement.style.borderBottom="1px solid #e2e3e4";
+        mainElement.style.backgroundColor="#fff";
+        rightElementsOnHeader[0].style.borderLeft="none";
     }
 };
 
