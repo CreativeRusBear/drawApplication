@@ -1,9 +1,12 @@
 window.onload = init;
 var fileOpen =false;
+var openInsert=false;
 var hideSection=false;
 function init() {
     var file = document.getElementById("file");
     file.onclick = elementsInFile;
+    var insertText=document.getElementById("insertText");
+    insertText.onclick=elementsOfInsert;
     var hideAndShowElements=document.getElementById("hideElements");
     hideAndShowElements.onclick=hideAndShowTools;
     var linkOnMyGitRepository=document.getElementById("aboutProduct");
@@ -51,4 +54,25 @@ function hideAndShowTools(eventObj) {
 
 function repository() {
     window.open('https://github.com/CreativeRusBear/drawApplication');
+};
+
+function elementsOfInsert(eventObj) {
+    var insertBlock=document.getElementsByClassName("insert");
+    var block = document.getElementById("smallItemsOfInsert");
+    block.style.border="1px solid #dcddde";
+    block.style.boxShadow = "7px 7px 22px 0px rgba(143,143,143,1)";
+    if (openInsert){
+        openInsert=false;
+        eventObj.target.style.background="none";
+        block.style.display="none";
+    } else {
+        insertBlock[0].style.border="1px solid #abd4fe";
+        eventObj.target.style.borderTop="1px solid #abd4fe";
+        eventObj.target.style.backgroundColor = "#f1f7fe";
+        /*style for block*/
+        block.style.display = "block";
+        block.style.width = "10%";
+        block.style.background = "#fbfcfd";
+        openInsert=true;
+    }
 };

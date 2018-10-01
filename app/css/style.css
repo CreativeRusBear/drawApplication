@@ -127,6 +127,32 @@ section {
 .buffer .text {
   text-align: center;
 }
+.buffer #smallItemsOfInsert {
+  position: absolute;
+  display: none;
+}
+.buffer #smallItemsOfInsert li:hover {
+  background: #f1f7fe;
+  border: 1px solid #abd4fe;
+}
+.buffer #smallItemsOfInsert li img {
+  width: 15px;
+  height: 15px;
+}
+.buffer #smallItemsOfInsert li #smallInsert, .buffer #smallItemsOfInsert li #smallInsertFrom {
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+}
+.buffer #smallItemsOfInsert li .forImg {
+  padding: 3px;
+}
+.buffer #smallItemsOfInsert li p {
+  position: relative;
+  top: 3px;
+  padding-left: 3px;
+}
 
 .insert:hover {
   border: 1px solid #abd4fe;

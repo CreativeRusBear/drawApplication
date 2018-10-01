@@ -20,6 +20,7 @@ $darkGreyForTools: #5a5a5a;
     } ;
     &:hover{
       background: $borderHoverBackgroundColor;
+
     }
   }
 }
@@ -148,12 +149,46 @@ section{
   .text{
     text-align: center;
   }
+  #smallItemsOfInsert{
+    //@extend #inFile;
+    position: absolute;
+    display: none;
+    li{
+      &:hover{
+        @include hoverElement;
+      }
+      img{
+        width: 15px;
+        height: 15px;
+      }
+      #smallInsert, #smallInsertFrom{
+        padding:  0;
+        display: flex;
+        justify-content: flex-start;
+        margin: 0;
+      }
+      .forImg{
+        padding:3px ;
+        //border-right: 1px solid black;
+      }
+      p{
+        position: relative;
+        top: 3px;
+        padding-left: 3px;
+      }
+    }
+    //#smallInsert,#smallInsertFrom{
+    //  display: flex;
+    //  justify-content: flex-start;
+    //}
+  }
 }
 .insert{
   &:hover{
       @include hoverElementsWithText;
     }
 }
+
 .drawTools{
   padding: 0 7px;
   border-right: 1px solid #e2e3e4;
