@@ -72,6 +72,13 @@ header {
   padding: 10px 15px;
 }
 
+.active {
+  width: 20%;
+  background-color: #fbfcfd;
+  border: 1px solid #dcddde;
+  box-shadow: 7px 7px 22px 0px #8f8f8f;
+}
+
 #inFile {
   position: absolute;
   display: none;

@@ -93,6 +93,12 @@ header{
   background: #f6f7f8;
   padding: 10px 15px;
 }
+.active{
+  width: 20%;
+  background-color: #fbfcfd;
+  border: 1px solid #dcddde;
+  box-shadow: 7px 7px 22px 0px rgba(143,143,143,1);
+}
 #inFile{
   position: absolute;
   display: none;
@@ -115,7 +121,6 @@ header{
     }
   }
 }
-
 section{
   font-size: 12px;
 
