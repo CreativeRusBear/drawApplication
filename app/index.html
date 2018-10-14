@@ -13,13 +13,13 @@
 <header>
     <div class="container">
         <div class="leftElements">
-            <div id="file">Файл</div>
+            <div id="file" title="Paint&#013;&#013;Щелкните здесь, чтобы&#013;открыть, сохранить&#013;или выполнить любые&#013;другие доступные&#013;действия с ним">Файл</div>
             <div id="main">Главная</div>
         </div>
         <div class="rightElements">
-            <p id="hideElements">&#8743;</p>
-            <div id="info">
-                <div id="aboutProduct">?</div>
+            <p id="hideElements" accesskey="h" title="Свернуть ленту&#013;(Chrome, Safari, IE: Alt+H),&#013;(Opera: Shift+Esc, H),&#013;(Firefox: Shift+Alt+H)&#013;&#013;Отбражение на ленте только&#013;имен вкладок">&#8743;</p>
+            <div id="info" title="git-репозиторий&#013;(Chrome, Safari, IE: Alt+G),&#013;(Opera: Shift+Esc, G),&#013;(Firefox: Shift+Alt+G)&#013;&#013;Переход на git-репозиторий">
+                <div id="aboutProduct" accesskey="g">?</div>
             </div>
         </div>
     </div>
@@ -76,7 +76,7 @@
                 </div>
             </div>
             <div class="smallItemsInBuffer">
-                <img src="img/tools/insert/carve_false.png" alt="Вырезать" id="cut">
+                <img src="img/tools/insert/carve_f.png" alt="Вырезать" id="cut">
                 <img src="img/tools/insert/copy_false.png" alt="Копировать" id="copy">
             </div>
         </div>
@@ -87,7 +87,7 @@
                         <div class="forImg">
                             <img src="img/tools/insert/note_false.png" alt="Блокнот">
                         </div>
-                        <p>Вставить</p>
+                        <label>Вставить</label>
                     </div>
                 </li>
                 <li class="activeLi">
@@ -95,7 +95,11 @@
                         <div class="forImg">
                             <img src="img/tools/insert/insertFrom.png" alt="Галерея">
                         </div>
-                        <p>Вставить из</p>
+                        <div class="typeFile">
+                            <label for="myfile" class="addFile">Вставить из</label>
+                            <input type="file" class="my" id="myfile" name="myfile" accept="image/*,image/jpeg,image/bmp,image/gif,image/png,
+                            image/tiff">
+                        </div>
                     </div>
                 </li>
             </ul>
