@@ -94,7 +94,6 @@ header{
   padding: 10px 15px;
 }
 .active{
-  width: 20%;
   background-color: #fbfcfd;
   border: 1px solid #dcddde;
   box-shadow: 7px 7px 22px 0px rgba(143,143,143,1);
@@ -159,8 +158,12 @@ section{
     position: absolute;
     display: none;
     li{
-      &:hover{
-        @include hoverElement;
+      &.activeLi{
+        &:hover{
+          @include hoverElement;
+        }
+        p{
+          color: black;}
       }
       img{
         width: 15px;
@@ -174,18 +177,14 @@ section{
       }
       .forImg{
         padding:3px ;
-        //border-right: 1px solid black;
       }
       p{
+        color: #9e9e9e;
         position: relative;
         top: 3px;
         padding-left: 3px;
       }
     }
-    //#smallInsert,#smallInsertFrom{
-    //  display: flex;
-    //  justify-content: flex-start;
-    //}
   }
 }
 .insert{
